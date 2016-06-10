@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="responsive-iframe-element">
+    <template>
+        <style>
+            :host {
+                height: 100%;
+            }
+            .wrapper {
+                width: var(--responsive-iframe-wrapper-width, 100%);
+                height: 100%;
+                margin: 0 auto;
+            }
+            .h_iframe {
+                position: relative;
+            }
+            .h_iframe .ratio {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .h_iframe iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div class="wrapper">
+            <div class="h_iframe">
+                <img class="ratio" src="http://placehold.it/16x9"/>
+                <iframe src="[[source]]" sandbox="[[restrictions]]" frameborder="0"></iframe>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'responsive-iframe-element',
+
+            properties: {
+                source: {
+                    type: String,
+                    value: 'http://www.youtube.com/embed/fFF2Yup2dMM'
+                },
+                restrictions: {
+                  type: String,
+                  value: 'allow-forms allow-popup allow-scripts allow-same-origin allow-modals'
+                }
+            }
+        });
+    </script>
+</dom-module>
