@@ -1,7 +1,25 @@
 {
   "name": "responsive-iframe-element",
+  "authors": [
+    "Ruud Prein <ruud.prein@gmail.com>"
+  ],
   "description": "Responsive iFrame container for sandboxing web applications",
   "main": "responsive-iframe-element.html",
+  "keywords": [
+    "web-components",
+    "iframe",
+    "responsive"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/ruud/responsive-iframe-element",
+  "homepage": "https://github.com/ruud/responsive-iframe-element",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0"
   },
@@ -10,10 +28,5 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
-  },
-  "keywords": [
-    "web-components",
-    "iframe",
-    "responsive"
-  ]
+  }
 }
